@@ -1,6 +1,6 @@
 # Sitediff demo
 
-A small demo to show, how sitediff works. For this demo we assume we have two sites:
+A small demo to show how sitediff works. For this demo we assume we have two sites:
 
 - actual: An actual project
 - upgrade: an upgrade we work on for the project
