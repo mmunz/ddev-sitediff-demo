@@ -1,0 +1,16 @@
+---
+includes:
+  - sanitization.yaml
+before:
+  url: https://actual.sitediff-demo.ddev.site/
+after:
+  url: https://upgrade.sitediff-demo.ddev.site/
+settings:
+  # Crawl 2 levels deep.
+  depth: 2
+  concurrency: 10
+  # Don't follow links to PDF files.
+  exclude: '.*\.pdf'
+  ignore_whitespace: true
+
+

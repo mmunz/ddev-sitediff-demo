@@ -16,7 +16,7 @@
     </section>
     <section id="c2" class="frame">
         <h2>The current time</h2>
-        In case you need to know the current time: <?php echo(time()) ?>
+        In case you need to know the current time: <span class="timestamp"><?php echo(time()) ?></span>
     </section>
     <section id="c3" class="frame">
         <img src="https://upgrade.sitediff-demo.ddev.site/fileadmin/monkey.png" alt="monkey" />

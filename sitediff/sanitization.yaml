@@ -1,0 +1,28 @@
+sanitization:
+    -
+        title: Strip domain from absolute urls
+        pattern: 'https:\/\/[a-zA-Z0-9.:-]+'
+        substitute: 'https://__domain__'
+    -
+        title: Rewrite cache buster from stylesheet url
+        pattern: 'style\.css\?cb=[0-9]+'
+        substitute: 'style.css?cb=hash'
+    -
+        title: 'processed_files_hash'
+        pattern: '\/_processed_\/[0-9a-f]?\/[0-9a-f]?\/.*\.[a-zA-Z0-9.:-]+'
+        substitute: '__file__'
+
+dom_transform:
+    -
+        title: Remove span with timestamp
+        type: remove
+        selector: .timestamp
+
+after:
+    sanitization:
+        -
+            title: Remove loading tag from images on upgraded site
+            pattern:  ' loading="lazy"'
+            substitute: ''
+
+
