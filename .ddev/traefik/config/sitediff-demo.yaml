@@ -1,0 +1,86 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    sitediff-demo-web-80-http:
+      
+      rule: HostRegexp(`sitediff-demo.ddev.site`)
+      
+      service: "sitediff-demo-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    sitediff-demo-web-8025-http:
+      
+      rule: HostRegexp(`sitediff-demo.ddev.site`)
+      
+      service: "sitediff-demo-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    
+    
+    
+    
+    sitediff-demo-web-80-https:
+      
+      rule: HostRegexp(`sitediff-demo.ddev.site`)
+      
+      service: "sitediff-demo-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    sitediff-demo-web-8025-https:
+      
+      rule: HostRegexp(`sitediff-demo.ddev.site`)
+      
+      service: "sitediff-demo-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  services:
+    
+    sitediff-demo-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-sitediff-demo-web:80
+    
+    sitediff-demo-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-sitediff-demo-web:8025
+    
+    sitediff-demo-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-sitediff-demo-web:80
+    
+    sitediff-demo-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-sitediff-demo-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/sitediff-demo.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/sitediff-demo.key
+

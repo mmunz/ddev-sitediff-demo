@@ -1,0 +1,39 @@
+
+body {
+    max-width: 992px;
+    margin: 0 auto;
+    color: #2b2b2b;
+}
+.page-nav {
+    background: #f49700;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+
+}
+.nav-item {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 1rem;
+}
+.nav-link {
+    color: #323232;
+    text-decoration: none;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: black;
+    text-decoration: none;
+}
+.frame {
+    margin-bottom: 1rem;
+    background: #efefef;
+    padding: 0.75rem;
+}
+.hidden {
+    display: none;
+}
+
